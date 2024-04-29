@@ -1,0 +1,19 @@
+Step 1. Restore the database backup file
+
+Step 2. Please open the .NET project and run the application
+
+Step 3. After completing restore backup and running the application, open the angular app (in this project
+it's called Frontend) and run the application
+
+Step 4. In this project, you will have two menus named as Home and Blog. In Blog page, if you click any blog
+post, it will take you details page of specific blog page. 
+
+This is dynamic. If you click another one, it will also take you dynamically that post details page. At the end
+of evry details page article, you'will have to see a button named as EditBlog. 
+
+If you click on it a popup will be open. But I'm not being able to complete the edit task.
+
+One more thing you will have found in it is multiple reference.
+
+
+--------------- Thank you sir------------------

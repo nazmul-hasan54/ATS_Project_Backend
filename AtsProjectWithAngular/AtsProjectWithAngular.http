@@ -1,0 +1,6 @@
+@AtsProjectWithAngular_HostAddress = http://localhost:5188
+
+GET {{AtsProjectWithAngular_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
