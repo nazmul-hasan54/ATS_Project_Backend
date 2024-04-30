@@ -36,9 +36,6 @@ namespace AtsProjectWithAngular.Migrations
                     b.Property<string>("BlogImage")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BlogTags")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("BlogTitle")
                         .HasColumnType("nvarchar(max)");
 
@@ -69,6 +66,28 @@ namespace AtsProjectWithAngular.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("AtsProjectWithAngular.Domain.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("AtsProjectWithAngular.Domain.Blog", b =>

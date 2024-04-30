@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xkBPWXirMBDyhPvZQrrWdOIU+h0I06ADTZUNyVxFLOv/xrE/qFJJSz0ET0dGvI4trGZSAchk4VBi40gKHNEmcw==",
+  "dgSpecHash": "E2cbGJhd7eB0Elk6rbPH8j9B/3bpu3lEBa20tkS1bABHn4xjgfPA0WtVJvtyO59YM/wkDJakEB/sBEJVTNTALQ==",
   "success": true,
-  "projectFilePath": "E:\\MasterDetails\\AtsProjectWithAngular\\AtsProjectWithAngular\\AtsProjectWithAngular.csproj",
+  "projectFilePath": "E:\\AtsProjectWithAngular\\Backend\\AtsProjectWithAngular\\AtsProjectWithAngular.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -9,6 +9,7 @@ namespace AtsProjectWithAngular.Domain.Context
             
         }
 
+        public DbSet<User> Users { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
     }

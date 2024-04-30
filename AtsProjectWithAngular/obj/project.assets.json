@@ -4588,11 +4588,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MasterDetails\\AtsProjectWithAngular\\AtsProjectWithAngular\\AtsProjectWithAngular.csproj",
+      "projectUniqueName": "E:\\AtsProjectWithAngular\\Backend\\AtsProjectWithAngular\\AtsProjectWithAngular.csproj",
       "projectName": "AtsProjectWithAngular",
-      "projectPath": "E:\\MasterDetails\\AtsProjectWithAngular\\AtsProjectWithAngular\\AtsProjectWithAngular.csproj",
+      "projectPath": "E:\\AtsProjectWithAngular\\Backend\\AtsProjectWithAngular\\AtsProjectWithAngular.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "E:\\MasterDetails\\AtsProjectWithAngular\\AtsProjectWithAngular\\obj\\",
+      "outputPath": "E:\\AtsProjectWithAngular\\Backend\\AtsProjectWithAngular\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -52,14 +52,13 @@ namespace AtsProjectWithAngular.Controllers
                         BlogTitle = blog.BlogTitle,
                         BlogDescription = blog.BlogDescription,
                         CategoryId = blog.CategoryId,
-                        BlogTags = blog.BlogTags,
                         CreatedDate = blog.CreatedDate,
                         BlogImage = filePath
                     };
                     var result = _mapper.Map<Blog>(newBlog);
                     _blogDbContext.Blogs.Add(result);
                     await _blogDbContext.SaveChangesAsync();
-                    return CreatedAtAction("GetBlogById", blog.BlogId, blog);
+                    return CreatedAtAction("GetBlogById", new { id= blog.BlogId }, blog);
                 }
                 else
                 {
@@ -105,10 +104,43 @@ namespace AtsProjectWithAngular.Controllers
 
                 // Check the allowed extentions
                 var ext = Path.GetExtension(imageFile.FileName);
-                var allowedExtension = new string[] { ".jpg", ".png", "jpeg" };
-                if (allowedExtension.Contains(ext))
+                var allowedExtension = new string[] { ".jpg", ".png", ".jpeg", ".webp" };
+                if (!allowedExtension.Contains(ext))
                 {
-                    string msg = string.Format("Only {0}, {1}, {2} extions are allowed");
+                    string msg = string.Format("Only {0} extions are allowed", string.Join(",", allowedExtension));
+                    return msg;
+                }
+                string uniqueString = Guid.NewGuid().ToString();
+                // We are trying to create new file name here
+                var newFileName = uniqueString + ext;
+                var fileWithPath = Path.Combine(path, newFileName);
+                var stream = new FileStream(fileWithPath, FileMode.Create);
+                imageFile.CopyTo(stream);
+                stream.Close();
+                return newFileName;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+        private string GetImage(IFormFile imageFile)
+        {
+            try
+            {
+                var contentPath = this._environment.ContentRootPath;
+                var path = Path.Combine(contentPath, "Uploads");
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+
+                // Check the allowed extentions
+                var ext = Path.GetExtension(imageFile.FileName);
+                var allowedExtension = new string[] { ".jpg", ".png", ".jpeg", ".webp" };
+                if (!allowedExtension.Contains(ext))
+                {
+                    string msg = string.Format("Only {0} extions are allowed", string.Join(",", allowedExtension));
                     return msg;
                 }
                 string uniqueString = Guid.NewGuid().ToString();
